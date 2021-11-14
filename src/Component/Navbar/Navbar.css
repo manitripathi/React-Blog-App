@@ -1,0 +1,30 @@
+.TheSiren{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 30px 0px;
+}
+.The{
+    font-size: 22px;
+    font-weight: 500;
+    transform: rotate(-90deg);
+    letter-spacing: 2px;
+}
+.Siren{
+    font-size: 40px;
+    font-weight: 700;
+}
+.NavbarOptions{
+    display: flex;
+    justify-content: space-evenly;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+}
+.hrLine{
+    border:1px solid var(-- gray);
+    margin-bottom: 40px;
+    opacity: 0.3;
+}
