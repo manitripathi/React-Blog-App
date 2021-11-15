@@ -7,10 +7,19 @@ export default function Home(){
     return(
         <div className='images'>
             <div className='img1'><img src={Snap1} className='snap1' alt=''/>
-                <span className='imgText1'>Title of vertical gallery</span>
+                <div className='imgText11'>Title of vertical gallery</div>
+                <div className='imgText12'>Travel/August 21, 2017</div>
             </div>
-            <div className='img2'><img src={Snap2} className='snap snap2' alt=''/></div>
-            <div className='img3'><img src={Snap2} className='snap snap3' alt=''/></div>
+            <div className='img2'><img src={Snap2} className='snap snap2' alt=''/>
+                <div className='imgText21'>The Sound cloud</div>
+                <div className='imgText22'>You loved id doomed</div>
+                <div className='imgText23'>Travel/August 21, 2017</div> 
+            </div>
+            <div className='img3'><img src={Snap2} className='snap snap3' alt=''/>
+                <div className='imgText21'>The Sound cloud</div>
+                <div className='imgText22'>You loved id doomed</div>
+                <div className='imgText23'>Travel/August 21, 2017</div>
+            </div>
         </div>
     );
 }
