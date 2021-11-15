@@ -2,6 +2,7 @@
     display: grid;
     justify-content: center;
     grid-column-gap: 5px;
+    margin-bottom: 50px;
 }
 .snap1{
     width:600px;

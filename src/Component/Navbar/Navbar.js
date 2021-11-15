@@ -1,6 +1,7 @@
 import React from "react";
 import './Navbar.css';
 import { Link,Switch,Route } from "react-router-dom";
+import Home from "../Home/Home";
 
 export default function Navbar(){
     return(
@@ -19,7 +20,7 @@ export default function Navbar(){
         </div>
         <hr className='hrLine'/>
         <Switch>
-            <Route path='/'></Route>
+            <Route path='/' component={Home}></Route>
         </Switch>
         </div>
     );

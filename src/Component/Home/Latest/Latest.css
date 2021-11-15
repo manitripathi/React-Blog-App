@@ -1,0 +1,41 @@
+.LatestHeading{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.hrLine1{
+    border: 2px solid orange;
+    width:60px;
+    margin:0px 0px 40px 0px;
+}
+.JoshuaPic{
+    width:300px;
+    height:250px;
+    border-radius: 10px 10px 0px 0px;
+}
+.LatestImg{
+    display: flex;
+    justify-content: space-around;
+}
+.subHeading{
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-left: 35px;
+    opacity: 0.8;
+}
+.content{
+    font-size: 14px;
+    margin: 10px 0px 20px 35px;
+    opacity: 0.6;
+}
+.content1{
+    font-weight: 900;
+    font-size: 10px;
+    margin-left: 35px;
+    opacity: 0.6;
+}
+.content2{
+    font-size: 10px;
+    opacity: 0.6;
+}

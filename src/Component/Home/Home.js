@@ -2,9 +2,11 @@ import React from "react";
 import './Home.css';
 import Snap1 from "./pic1.jpg";
 import Snap2 from './pic2.jpg';
+import Latest from "./Latest/Latest";
 
 export default function Home(){
     return(
+        <div>
         <div className='images'>
             <div className='img1'><img src={Snap1} className='snap1' alt=''/>
                 <div className='imgText11'>Title of vertical gallery</div>
@@ -20,6 +22,8 @@ export default function Home(){
                 <div className='imgText22'>You loved id doomed</div>
                 <div className='imgText23'>Travel/August 21, 2017</div>
             </div>
+            </div>
+            <Latest/>
         </div>
     );
 }
