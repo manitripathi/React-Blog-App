@@ -2,7 +2,7 @@ import React from "react";
 import './Home.css';
 import Snap1 from "./pic1.jpg";
 import Snap2 from './pic2.jpg';
-import Latest from "./Latest/Latest";
+import Latest from "../Latest/Latest";
 
 export default function Home(){
     return(

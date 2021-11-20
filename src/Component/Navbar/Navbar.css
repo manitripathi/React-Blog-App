@@ -23,6 +23,7 @@
     font-size: 12px;
     font-weight: 500;
 }
+
 .hrLine{
     border:1px solid var(-- gray);
     margin-bottom: 40px;
