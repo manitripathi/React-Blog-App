@@ -3,18 +3,19 @@ import './Navbar.css';
 import { Link,Switch,Route } from "react-router-dom";
 import Home from '../FrontPage/Home/Home';
 import Category from "../Category/Category";
+import Technology from "../Technology/Technology";
 
 export default function Navbar(){
     const navbar=[
-        {to:'/', desc:'Home', id:1},
-        {to:'/category/Bollywood', desc:'Bollywood', id:2},
-        {to:'/category/Technology', desc:'Technology', id:3},
-        {to:'/category/Hollywood', desc:'Hollywood', id:4},
+        {to:'/', desc:'Home', id:1,},
+        {to:'/category/Bollywood', desc:'Bollywood', id:2,},
+        {to:'/Technology', desc:'Technology', id:3},
+        {to:'/category/Hollywood', desc:'Hollywood', id:4,},
         {to:'/category/Fitness', desc:'Fitness', id:5},
         {to:'/category/Food', desc:'Food', id:6},
     ];
     const navbarLink= navbar.map((value,index)=>(
-        <Link to={value.to} key={index}  className='link'>
+        <Link to={value.to} key={index}  className='link' >
             {value.desc}
         </Link>
     ));
@@ -36,7 +37,8 @@ export default function Navbar(){
         <hr className='hrLine'/>
         <Switch>
             <Route path='/' component={Home} exact></Route>
-            <Route path='/:category' component={Category}></Route>
+            <Route path='/:category/:id' component={Category} exact></Route>
+            <Route path='/Technology' component={Technology} exact></Route>
         </Switch>
         </div>
     );

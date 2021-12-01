@@ -3,8 +3,14 @@ import './Home.css';
 import Snap1 from "./pic1.jpg";
 import Snap2 from './pic2.jpg';
 import Latest from "../Latest/Latest";
+/* import TopPost from "../../TopPost/TopPost";
+import { BlogContext } from '../../Category/Category'; */
+import Category from "../../Category/Category";
 
 export default function Home(){
+ 
+    /* const blogs = useContext(BlogContext); */
+
     return(
         <div>
         <div className='images'>
@@ -24,6 +30,11 @@ export default function Home(){
             </div>
             </div>
             <Latest/>
+            <div className='LatestArticles'>
+            <div className='LatestArticlesHeading'>Latest Articles</div>
+            <hr className='hrLine-LatestArticle'/>
+                <Category/>
+            </div>
         </div>
     );
 }

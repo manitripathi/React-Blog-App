@@ -1,23 +1,17 @@
-import React from 'react';
-import BollySnaps from './bollysnaps.jpg';
-import './Category.css';
+import React, {createContext } from "react";
+import { blog } from "../BlogContent/BlogContent";
+import CategoryContext from "./CategoryContext";
 
-export default function Category(){
-    const blog=[
-        {id:2, title:'Bollywood',desc:<img src={BollySnaps} alt="" className='BollySnaps'/>},
-    ];
-    
-    return(
-        <div>
-            <div className='bollywood'>
-                {blog.map((bollyBogs)=>(
-                    <div key={bollyBogs.id}>
-                    <div>{bollyBogs.title}</div>
-                    <hr/>
-                    <div>{bollyBogs.desc}</div>
-                </div>
-                ))}
-            </div>
-        </div>
-    );
+export const BlogContext=createContext();
+
+const Category=()=> {
+
+  return (
+    <div className='Categrory'>
+      <BlogContext.Provider value={blog}>
+        <CategoryContext/>
+      </BlogContext.Provider>
+    </div>
+  );
 }
+export default Category;
