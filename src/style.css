@@ -1,0 +1,14 @@
+.NavbarInnerHeadings{
+    font-size: 25px;
+}
+.horizontalLineStyling{
+    width:100px;
+    border:1px solid orange;
+    margin-left: 0%;
+}
+
+@media screen and (min-width:360px) and (max-width:640px) {
+    .TopPosts{
+        font-size: 25px;
+    }
+}    

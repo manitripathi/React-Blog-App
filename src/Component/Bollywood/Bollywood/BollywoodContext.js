@@ -1,22 +1,13 @@
 import React, { useState, useContext} from "react";
-import TopPost from "../TopPost/TopPost";
-import "./Category.css";
-import { BlogContext } from './Category';
+// import TopPost from '../../TopPost/TopPost';
+import "../../Category/Category.css";
+import { BollyContext } from "./BollywoodCategory";
 import { Link } from "react-router-dom";
 
 
-const CategoryContext = (props) => {
+const BollywoodContext = (props) => {
 
 console.warn(props);
-
-  // const [post,setPost]=useState({});
-
-  // useEffect(()=>{
-  //   const blogId=props.match.params.postId;
-  //   console.log(blog);
-  //   blog.find(post=>post.id==blogId);
-  //   setPost(post);
-  // });
 
   const [visibleBlogs, setVisibleBlogs] = useState(3);
 
@@ -24,21 +15,19 @@ console.warn(props);
     setVisibleBlogs((prevVisibleBlogs) => prevVisibleBlogs + 4);
   };
 
-  const blogs = useContext(BlogContext);
+  const bollyBlogs = useContext(BollyContext);
 
   return (
     
     <div className="Category">
       <div className="bollywood">
-        {blogs.slice(0, visibleBlogs).map((bollyBogs) => (
+        {bollyBlogs.slice(0, visibleBlogs).map((bollyBogs) => (
           <div key={bollyBogs.id}>
             <div>
-              <div className='BollywoodHeading'>{bollyBogs.title}</div>
-
               <div className="descContent">
                 <div>{bollyBogs.desc}</div>
                 <div>
-                <Link to='/Food/FoodLink'>
+                <Link to='/Bollywood/BollywoodLink'>
                   <div className="subHeading">{bollyBogs.content}</div>
                   </Link>
                   <div className="content">{bollyBogs.content1}</div>
@@ -57,11 +46,11 @@ console.warn(props);
         </button>
       </div>
      
-      <div className='TopPost-flex'>
+      {/* <div className='TopPost-flex'>
         <TopPost />
-      </div>
+      </div> */}
     </div>
     
   );
 };
-export default CategoryContext;
+export default BollywoodContext;

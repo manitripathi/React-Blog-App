@@ -4,14 +4,15 @@ import CategoryContext from "./CategoryContext";
 
 export const BlogContext=createContext();
 
-const Category=()=> {
-
+const Category=(props)=> {
+ console.log(props)
   return (
-    <div className='Categrory'>
+    <div className='Category'>
       <BlogContext.Provider value={blog}>
-        <CategoryContext/>
+        <CategoryContext />
       </BlogContext.Provider>
     </div>
+    
   );
 }
 export default Category;
