@@ -3,7 +3,7 @@ import './Navbar.css';
 import { Link,Switch,Route } from "react-router-dom";
 import Home from '../FrontPage/Home/Home';
 // import Category from "../Category/Category";
-import Technology from "../Technology/Technology";
+import Technology from "../Technology/Technology/Technology";
 import Bollywood from '../Bollywood/Bollywood';
 import Hollywood from "../Hollywood/Hollywood";
 import Fitness from "../Fitness/Fitness";
@@ -13,6 +13,7 @@ import HollywoodLink from "../Hollywood/Hollywood/HollywoodLink";
 import FitnessLink from "../Fitness/Fitness/FitnessLink";
 import FoodLink from "../Food/FoodLink";
 import LatestLink from "../FrontPage/Latest/LatestLink";
+import TechnologyArticle from '../Technology/TechnologyArticle';
 
 export default function Navbar(){
     const navbar=[
@@ -57,6 +58,7 @@ export default function Navbar(){
             <Route path='/Fitness/FitnessLink' component={FitnessLink} exact></Route>
             <Route path='/Food/FoodLink' component={FoodLink} exact></Route>
             <Route path='/Home/Joshua' component={LatestLink} exact></Route>
+            <Route path='/Technology/TechnologyArticle' component={TechnologyArticle} exact></Route>
         </Switch>
         </div>
     );

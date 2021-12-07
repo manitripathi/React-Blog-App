@@ -6,7 +6,7 @@ import codeImg from './codeImg.png';
 import clap from './clap.png';
 import Latest from '../FrontPage/Latest/Latest';
 
-function Technology(){
+function TechnologyArticle(){
     const [claps,setClaps]=useState(0);
     /* const [mclaps,setMClaps]=useState(0); */
 
@@ -56,4 +56,4 @@ function Technology(){
         </div>
     )
 }
-export default Technology;
+export default TechnologyArticle;
