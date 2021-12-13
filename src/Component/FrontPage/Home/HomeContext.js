@@ -1,4 +1,4 @@
-import React, { useState, useContext} from "react";
+import React, {useContext} from "react";
 // import TopPost from '../../TopPost/TopPost';
 import "../../Category/Category.css";
 import { HomeSubContext } from "./HomeCategory";
@@ -9,7 +9,7 @@ const HomeContext = (props) => {
 
 console.warn(props);
 
-  const [visibleBlogs, setVisibleBlogs] = useState(2);
+  // const [visibleBlogs, setVisibleBlogs] = useState(2);
 
   /* const handleClick = () => {
     setVisibleBlogs((prevVisibleBlogs) => prevVisibleBlogs + 4);
@@ -26,7 +26,7 @@ console.warn(props);
       <div><img src={SnapFlex} alt='' className="SnapFlex"></img></div>
       </Link>
       <div>
-        {HomeBlogs.slice(0, visibleBlogs).map((bollyBogs) => (
+        {HomeBlogs.slice(0, 2).map((bollyBogs) => (
           <div key={bollyBogs.id}>
             {/* <div>
               <div className="descContent">
