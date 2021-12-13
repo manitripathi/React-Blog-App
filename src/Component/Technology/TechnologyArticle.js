@@ -4,13 +4,17 @@ import userImg from './userImg.png';
 import reactCoverImg from './reactCoverImg.png';
 import codeImg from './codeImg.png';
 import clap from './clap.png';
-import Latest from '../FrontPage/Latest/Latest';
+import Latest from '../FrontPage/LatestStories/Latest';
+import GetStarted from '../GetStarted/GetStarted';
 
 function TechnologyArticle(){
     const [claps,setClaps]=useState(0);
     /* const [mclaps,setMClaps]=useState(0); */
 
     return(
+        <>
+        <GetStarted/>
+        <hr/>
         <div className='mainTechDiv'>
           <div className='Technology'>
             <div className='Technology-Heading'>5 ways to animate a React app</div>
@@ -43,17 +47,19 @@ function TechnologyArticle(){
                 <div className='date'>Jan 28,2019 - 10min Read</div>
                 </div>
             </div>
-            <div className='MoreFromSiren'>
-                <div style={{fontWeight:500}}>More  From The Siren</div>
-                <hr style={{opacity:0.4}}/>
-                <Latest/>
-            </div>
         </div>
         <div className='ClapBtn'>
         <button onClick={()=>setClaps(prevClaps=>prevClaps+1)} className='likeBtn'><img src={clap} alt='' className='clapbtn'></img></button>
                 <span>{claps} Claps</span>
         </div>
+
         </div>
+        <div className='MoreFromSiren'>
+                <div className='MoreSiren'>More  From The Siren</div>
+                <hr style={{opacity:0.4}}/>
+                <Latest/>
+            </div>
+        </>
     )
 }
 export default TechnologyArticle;

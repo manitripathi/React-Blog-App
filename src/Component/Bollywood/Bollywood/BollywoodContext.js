@@ -1,15 +1,15 @@
 import React, { useState, useContext} from "react";
 // import TopPost from '../../TopPost/TopPost';
-import "../../Category/Category.css";
 import { BollyContext } from "./BollywoodCategory";
 import { Link } from "react-router-dom";
-
+import '../../Category/Category.css';
+import '../../../style.css';
 
 const BollywoodContext = (props) => {
 
 console.warn(props);
 
-  const [visibleBlogs, setVisibleBlogs] = useState(3);
+  const [visibleBlogs, setVisibleBlogs] = useState(6);
 
   const handleClick = () => {
     setVisibleBlogs((prevVisibleBlogs) => prevVisibleBlogs + 4);
@@ -27,7 +27,7 @@ console.warn(props);
               <div className="descContent">
                 <div>{bollyBogs.desc}</div>
                 <div>
-                <Link to='/Bollywood/BollywoodLink'>
+                <Link to={`/Bollywood/${bollyBogs.id}`} className="link">
                   <div className="subHeading">{bollyBogs.content}</div>
                   </Link>
                   <div className="content">{bollyBogs.content1}</div>

@@ -1,5 +1,5 @@
 import React, {createContext } from 'react';
-import { HollywoodPost} from './HollywoodPost';
+import { HollywoodPost} from './Hollypost/HollywoodPost';
 import HollywoodContext from './HollywoodContext';
 
 export const HollyContext=createContext();

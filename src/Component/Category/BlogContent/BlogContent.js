@@ -1,6 +1,6 @@
 import FoodImg from './foodImg.webp';
 
-export const blog = [
+export const Blog = [
   
     {
       id: 2,

@@ -1,5 +1,5 @@
 import React, {createContext } from 'react';
-import { FitnessPost} from './FitnessPost';
+import { FitnessPost} from './Fitnesspost/FitnessPost';
 import FitnessContext from './FitnessContext';
 
 export const FitContext=createContext();

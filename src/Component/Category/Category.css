@@ -3,8 +3,8 @@
     /* justify-content: space-around; */
 }
 .BollySnaps{
-    width:200px;
-    height:200px;
+    width:300px;
+    height:250px;
     display: flex;
     padding:10px;
 }
@@ -29,7 +29,11 @@ button{
 .TopPost-flex{
     margin-left: 80px;
 }
-
+.SnapFlex1{
+    width:500px;
+    height:540px;
+    margin-left: 0px;
+}
  @media screen and (min-width:360px) and (max-width:640px){
     .Category{
         display: flex;

@@ -9,7 +9,7 @@ const TechnologyContext = (props) => {
 
 console.warn(props);
 
-  const [visibleBlogs, setVisibleBlogs] = useState(3);
+  const [visibleBlogs, setVisibleBlogs] = useState(4);
 
   const handleClick = () => {
     setVisibleBlogs((prevVisibleBlogs) => prevVisibleBlogs + 4);
@@ -27,7 +27,7 @@ console.warn(props);
               <div className="descContent">
                 <div>{bollyBogs.desc}</div>
                 <div>
-                <Link to='/Technology/TechnologyArticle'>
+                <Link to={`/Technology/${bollyBogs.id}`} className="link">
                   <div className="subHeading">{bollyBogs.content}</div>
                   </Link>
                   <div className="content">{bollyBogs.content1}</div>

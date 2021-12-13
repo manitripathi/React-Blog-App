@@ -1,0 +1,30 @@
+.Login{
+    position: relative;
+    top:20vh;
+    text-align: center;
+}
+.form{
+    display: inline-block;
+    border: 1px solid red;
+    padding: 30px 50px 30px 50px;
+}
+.LoginHeading{
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+.email{
+    margin-bottom: 20px;
+}
+
+.inputField{
+    width:300px;
+    height:35px;
+}
+.LoginButton{
+    width:100px;
+    height:40px;
+    background-color: red;
+    color:white;
+    margin-top:50px;
+    cursor: pointer;
+}

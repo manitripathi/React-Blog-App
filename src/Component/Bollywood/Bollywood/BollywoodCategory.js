@@ -1,5 +1,5 @@
 import React, {createContext } from 'react';
-import { BollywoodPost} from './BollywoodPost';
+import { BollywoodPost} from './Bollypost/BollywoodPost';
 import BollywoodContext from './BollywoodContext';
 
 export const BollyContext=createContext();

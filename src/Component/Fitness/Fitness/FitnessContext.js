@@ -9,7 +9,7 @@ const FitnessContext = (props) => {
 
 console.warn(props);
 
-  const [visibleBlogs, setVisibleBlogs] = useState(3);
+  const [visibleBlogs, setVisibleBlogs] = useState(6);
 
   const handleClick = () => {
     setVisibleBlogs((prevVisibleBlogs) => prevVisibleBlogs + 4);
@@ -27,7 +27,7 @@ console.warn(props);
               <div className="descContent">
                 <div>{bollyBogs.desc}</div>
                 <div>
-                <Link to='/Fitness/FitnessLink'>
+                <Link to={`/Fitness/${bollyBogs.id}`} className="link">
                   <div className="subHeading">{bollyBogs.content}</div>
                   </Link>
                   <div className="content">{bollyBogs.content1}</div>

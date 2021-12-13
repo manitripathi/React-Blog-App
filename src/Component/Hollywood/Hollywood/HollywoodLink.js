@@ -1,44 +1,97 @@
-import React from "react";
-import HollyImg from "../Hollywood/hollyImg.jpg";
+import React,{useState,useEffect} from 'react';
+import {useParams} from 'react-router-dom';
+import clap from '../../ImagesFolder/clap.png';
+import {HollywoodPost} from './Hollypost/HollywoodPost';
+import Latest from '../../FrontPage/LatestStories/Latest';
+import userImg from '../../ImagesFolder/userImg.png';
+import '../../../style.css';
+import GetStarted from '../../GetStarted/GetStarted';
 
 function HollywoodLink(props) {
-  return (
-    <div className="SubLinkContents">
-      <div className="NavbarInnerHeadings">
-        Batman: The Animated Series’ Audio Drama in the Works with Original Cast
-      </div>
-      <hr className="horizontalLineStyling" />
-      <div>
-        <img src={HollyImg} alt="" className="reactCoverImg"></img>
-      </div>
-      <div>
-        <p>
-          Batman: The Animated Series ran for 85 episodes from 1992-95 and also
-          included Mark Hamill as Joker and introduced the world to the show’s
-          breakout character, Harley Quinn (Arleen Sorkin). It was set in a
-          1940s-style world and embraced the noir nature of the Dark Knight. It
-          also launched Conroy as what many consider the definitive Batman voice
-          actor, and saw the series jump to the big screen for Batman: Mask of
-          the Phantasm. The series is considered one of the great animated comic
-          book series, and won the Emmy for outstanding animated program in
-          1993. While it is unknown which castmembers might return for the audio
-          drama, surviving voice actors include Paul Williams (The Penguin),
-          Richard Moll (Two-Face), David Warner (Ra’s Al Ghul), Diane Pershing
-          (Poison Ivy), Adrienne Barbeau (Catwoman), Ron Perlman (Clayface),
-          Melissa Gilbert (Barbara Gordon) and Loren Lester (Dick Grayson /
-          Nightwing). There are multiple Batman audio dramas in the marketplace.
-          HBO Max has Batman: The Audio Adventures, starring Jeffrey Wright as
-          Batman, while Spotify has the upcoming Batman Unburied, starring
-          Winston Duke as the Caped Crusader, with The Dark Knight screenwriter
-          David S. Goyer overseeing. Marvel, too, has delved into the audio
-          drama space, with Wolverine: The Long Night and Wolverine: The Last
-          Trail. Meanwhile, Bruce Timm, the animator behind Batman: The Animated
-          Series is developing a separate animated Batman show with J.J. Abrams
-          and The Batman filmmaker Matt Reeves. That series bow on HBO Max.
-        </p>
-      </div>
-    </div>
-  );
+
+    const [claps,setClaps]=useState(0);
+
+    let {id}=useParams();
+
+    const [blog, setBlog] = useState('');
+
+    useEffect(() => {
+      let blog = HollywoodPost.find((blog) => blog.id === parseInt(id));
+      if (blog) {
+        setBlog(blog);
+        console.log(blog);
+      }
+    },[id]);
+
+    return (
+        <>
+        <GetStarted/>
+        <hr style={{width:'100%'}}/>
+        <div className='mainTechDiv'>
+          <div className='Technology'>
+            <div className='Technology-Heading'>{blog.content}</div>
+            <div className='ProfileName'>
+            <div className='flexArrangeUser'>
+            <div>
+                <div><img src={userImg} alt='' className='userImg'></img></div>
+                <div>
+                <div className='name'>Mani tripathi</div>
+                <div className='date'>Jan 28,2019 - 10min Read</div>
+                </div>
+            </div>
+            <div className="share-btns">
+                <div style={{padding:'2px'}}><i className="fab fa-linkedin"></i></div>
+                <div style={{padding:'2px'}}><i className="fab fa-facebook-square"></i></div>
+                <div style={{padding:'2px'}}><i className="fab fa-twitter-square"></i></div>
+                <div style={{padding:'2px'}}><i className="fab fa-twitter-square"></i></div>
+              </div>
+            </div>
+            
+                
+            </div>
+            <div className='bollyBogsDesc' >{blog.desc}</div>
+            <div>{blog.content1}</div>
+            <div className='text'>Let’s talk about them 😎</div>
+            {/* <div><img src={codeImg} alt='' className='codeImg'></img></div> */}
+            {/* <div className='ReactJsAnimation'>
+                <div className='flex-skills'>React</div>
+                <div className='flex-skills'>Javascipt</div>
+                <div className='flex-skills'>Animation</div>
+            </div> */}
+            <div>
+                <button onClick={()=>setClaps(prevClaps=>prevClaps+1)} className='likeBtn'><img src={clap} alt='' className='clapbtn'></img></button>
+                <span>{claps} Claps</span>
+            </div>
+            <hr style={{opacity:0.4}}/>
+            <div className='ProfileName'>
+                {/* <div><img src={userImg} alt='' className='userImg'></img></div> */}
+                <div>
+                <div className='date'>Written by -</div>
+                <div className='name'>Mani tripathi</div>
+                <div className='date'>Jan 28,2019 - 10min Read</div>
+                </div>
+            </div>
+            {/* <div className='MoreFromSiren'>
+                <div className='MoreSiren'>More  From The Siren</div>
+                <hr style={{opacity:0.4}}/>
+                <Latest/>
+            </div> */}
+        </div>
+        <div className='fixedPosition'>
+            <div>
+        <button onClick={()=>setClaps(prevClaps=>prevClaps+1)} className='likeBtn'><img src={clap} alt='' className='clapbtn'></img></button>
+                <span>{claps} Claps</span>
+        </div>
+        <div><i className="fi fi-rr-share"></i><span>Share this article</span></div>
+        </div>
+        </div>
+        <div className='MoreFromSiren'>
+                <div className='MoreSiren'>More  From The Siren</div>
+                <hr style={{opacity:0.4}}/>
+                <Latest/>
+            </div>
+        </>
+    );
 }
 
 export default HollywoodLink;

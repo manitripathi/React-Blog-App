@@ -3,6 +3,7 @@ import TopPost from "../TopPost/TopPost";
 import "./Category.css";
 import { BlogContext } from './Category';
 import { Link } from "react-router-dom";
+import SnapFlex from '../FrontPage/Home/pic1.jpg';
 
 
 const CategoryContext = (props) => {
@@ -36,9 +37,9 @@ console.warn(props);
               <div className='BollywoodHeading'>{bollyBogs.title}</div>
 
               <div className="descContent">
-                <div>{bollyBogs.desc}</div>
+                <div className="bollyBogsDesc">{bollyBogs.desc}</div>
                 <div>
-                <Link to='/Food/FoodLink'>
+                <Link to={`/Category/${bollyBogs.id}`} className="link">
                   <div className="subHeading">{bollyBogs.content}</div>
                   </Link>
                   <div className="content">{bollyBogs.content1}</div>
@@ -55,11 +56,20 @@ console.warn(props);
         <button type="button" onClick={handleClick}>
           <i className="fi fi-rr-arrow-down"></i> Load more
         </button>
+        <Link to ='/Home/pic1'>
+          <div><img src={SnapFlex} alt='' className="SnapFlex1"></img></div>
+        </Link>
+        
+      </div>
+      
+      <div>
+        <div>
+       <div className='ads'><span className='text-ads'>Advertisement</span></div>
+     </div>
+     <div><TopPost/></div>
       </div>
      
-      <div className='TopPost-flex'>
-        <TopPost />
-      </div>
+      
     </div>
     
   );

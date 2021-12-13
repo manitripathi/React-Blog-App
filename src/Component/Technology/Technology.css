@@ -1,7 +1,10 @@
+.mainTechDiv{
+    margin-left: 100px;
+}
 .Technology{
     /* margin:0px 5px 5px 10px; */
     width:450px;
-    margin-left:380px;
+    margin-left:360px;
 }
 .Technology-Heading{
     font-size: 20px;
@@ -16,7 +19,7 @@
 .ProfileName{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
 }
 
 .name{
@@ -62,10 +65,11 @@
     cursor: pointer;
 }
 .MoreFromSiren{
-    margin: 80px 250px 80px 0px;
+    margin: 80px 0px 80px 80px;
     position: relative;
     z-index: -1;
 }
+
 .ClapBtn{
     position: fixed;
     z-index: -2;

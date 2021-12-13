@@ -1,7 +1,7 @@
-import TechnologyImg from "../reactCoverImg.png";
+import TechnologyImg from "../../reactCoverImg.png";
 
 export const TechnologyPost = [
-  
+
     {
       id: 1,
       desc: <img src={TechnologyImg} alt="" className="BollySnaps" />,
@@ -49,6 +49,24 @@ export const TechnologyPost = [
     },
     {
       id: 6,
+      desc: <img src={TechnologyImg} alt="" className="BollySnaps" />,
+      content: "5 ways to animate a React app",
+      content1:
+        "Animation in ReactJs app is a popular topic and there are many ways to create different types of animations.",
+      content2: "Technology",
+      content3: " / Jan 28,2019",
+    },
+    {
+      id: 7,
+      desc: <img src={TechnologyImg} alt="" className="BollySnaps" />,
+      content: "5 ways to animate a React app",
+      content1:
+        "Animation in ReactJs app is a popular topic and there are many ways to create different types of animations.",
+      content2: "Technology",
+      content3: " / Jan 28,2019",
+    },
+    {
+      id: 8,
       desc: <img src={TechnologyImg} alt="" className="BollySnaps" />,
       content: "5 ways to animate a React app",
       content1:

@@ -1,5 +1,5 @@
 import React, {createContext } from 'react';
-import { TechnologyPost} from './TechnologyPost';
+import { TechnologyPost} from './TechnologyPost/TechnologyPost';
 import TechnologyContext from './TechnologyContext';
 
 export const TechContext=createContext();

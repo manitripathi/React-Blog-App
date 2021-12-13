@@ -12,15 +12,15 @@ function TopPost(blog) {
         <div className='TopPosts'>Top Posts</div>
         <hr className='horizontalLine'/>
       <div className="bollywood">
-        {blogs.slice(4,6).map((bollyBogs) => (
+        {blogs.slice(2,6).map((bollyBogs) => (
           <div key={bollyBogs.id}>
             <div>
-              {/* <div className='BollywoodHeading'>{bollyBogs.title}</div> */}
+              <div className='BollywoodHeading'>{bollyBogs.title}</div>
 
               <div className="descContent">
                 <div>{bollyBogs.desc}</div>
                 <div>
-                <Link to='/Food/FoodLink'>
+                <Link to={`/Food/${bollyBogs.id}`} className='link'>
                   <div className="subHeading">{bollyBogs.content}</div>
                   </Link>
                   <div className="content">{bollyBogs.content1}</div>
@@ -35,7 +35,7 @@ function TopPost(blog) {
           </div>
         ))}
       </div>
-      <div className='ads'><span className='text-ads'>Advertisement</span></div>
+      {/* <div className='ads'><span className='text-ads'>Advertisement</span></div> */}
     </div>
     );
 }

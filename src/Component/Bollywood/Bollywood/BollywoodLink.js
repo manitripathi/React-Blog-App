@@ -1,30 +1,96 @@
-import React from 'react';
-import BollyImg from '../Bollywood/bollyImg.jpg';
+import React,{useState,useEffect} from 'react';
+import {useParams} from 'react-router-dom';
+import clap from './clap.png';
+import {BollywoodPost} from './Bollypost/BollywoodPost';
+import Latest from '../../FrontPage/LatestStories/Latest';
+import userImg from '../../ImagesFolder/userImg.png';
+import '../../../style.css';
+import GetStarted from '../../GetStarted/GetStarted';
 
 function BollywoodLink(props) {
+
+    const [claps,setClaps]=useState(0);
+
+    let {id}=useParams();
+
+    const [blog, setBlog] = useState('');
+
+    useEffect(() => {
+      let blog = BollywoodPost.find((blog) => blog.id === parseInt(id));
+      if (blog) {
+        setBlog(blog);
+        console.log(blog);
+      }
+    },[id]);
+
     return (
-        <div className='SubLinkContents'>
-            <div className='NavbarInnerHeadings'>Vicky Kaushal and Katrina Kaif's wedding</div>
-            <hr className='horizontalLineStyling'/>
-            <div><img src={BollyImg} alt='' className='reactCoverImg'></img></div>
+        <>
+        <GetStarted/>
+        <hr style={{width:'100%'}}/>
+        <div className='mainTechDiv'>
+          <div className='Technology'>
+            <div className='Technology-Heading'>{blog.content}</div>
+            <div className='ProfileName'>
+            <div className='flexArrangeUser'>
             <div>
-                <p>
-                A source close to the development tells ETimes, "Vicky Kaushal and Katrina Kaif's wedding is going to be a private, intimate affair with only immediate family and close friends in attendance. The couple is excited to share their joy with their friends and well-wishers in the industry too. We hear they will be hosting a celebration for the industry at a much later date."
-                </p>
-                <p>
-                The 'intimate' wedding will reportedly have 120 guests in attendance. The District Collector of Sawai Madhopur confirmed the news to media persons while stating that all COVID-19 protocols will have to be followed and insisted that all the guests need to be fully vaccinated.
-                </p>
-                <p>
-                "We have been informed by organisers that a total of 120 guests are invited to the wedding and the events will take place between December 7 to December 10," Rajendra Kishan said.
-                </p>
-                <p>
-                As per our sources, the wedding festivities will kick off with a sangeet on December 7, followed by mehendi on December 8 and the wedding on December 9. The celebrations will conclude with a reception on December 10.
-                </p>
-                <p>
-                To ensure foolproof security, 100 bouncers from Jaipur have been hired and personnel from the Rajasthan Police will also be deployed outside the wedding venue.
-                </p>
+                <div><img src={userImg} alt='' className='userImg'></img></div>
+                <div>
+                <div className='name'>Mani tripathi</div>
+                <div className='date'>Jan 28,2019 - 10min Read</div>
+                </div>
             </div>
+            <div className="share-btns">
+                <div style={{padding:'2px'}}><i className="fab fa-linkedin"></i></div>
+                <div style={{padding:'2px'}}><i className="fab fa-facebook-square"></i></div>
+                <div style={{padding:'2px'}}><i className="fab fa-twitter-square"></i></div>
+                <div style={{padding:'2px'}}><i className="fab fa-twitter-square"></i></div>
+              </div>
+            </div>
+            
+                
+            </div>
+            <div className='bollyBogsDesc' >{blog.desc}</div>
+            <div>{blog.content1}</div>
+            <div className='text'>Let’s talk about them 😎</div>
+            {/* <div><img src={codeImg} alt='' className='codeImg'></img></div> */}
+            {/* <div className='ReactJsAnimation'>
+                <div className='flex-skills'>React</div>
+                <div className='flex-skills'>Javascipt</div>
+                <div className='flex-skills'>Animation</div>
+            </div> */}
+            <div>
+                <button onClick={()=>setClaps(prevClaps=>prevClaps+1)} className='likeBtn'><img src={clap} alt='' className='clapbtn'></img></button>
+                <span>{claps} Claps</span>
+            </div>
+            <hr style={{opacity:0.4}}/>
+            <div className='ProfileName'>
+                {/* <div><img src={userImg} alt='' className='userImg'></img></div> */}
+                <div>
+                <div className='date'>Written by -</div>
+                <div className='name'>Mani tripathi</div>
+                <div className='date'>Jan 28,2019 - 10min Read</div>
+                </div>
+            </div>
+            {/* <div className='MoreFromSiren'>
+                <div className='MoreSiren'>More  From The Siren</div>
+                <hr style={{opacity:0.4}}/>
+                <Latest/>
+            </div> */}
         </div>
+        <div className='fixedPosition'>
+            <div>
+        <button onClick={()=>setClaps(prevClaps=>prevClaps+1)} className='likeBtn'><img src={clap} alt='' className='clapbtn'></img></button>
+                <span>{claps} Claps</span>
+        </div>
+        <div><i className="fi fi-rr-share"></i><span>Share this article</span></div>
+        </div>
+        </div>
+        <div className='MoreFromSiren'>
+                <div className='MoreSiren'>More  From The Siren</div>
+                <hr style={{opacity:0.4}}/>
+                <Latest/>
+            </div>
+        </>
     );
 }
 

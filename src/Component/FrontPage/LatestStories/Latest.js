@@ -2,6 +2,7 @@ import React from 'react';
 import JoshuaPic from './joshuaAdventureImg1.jpg';
 import './Latest.css';
 import { Link } from 'react-router-dom';
+import '../../../style.css';
 
 export default function Latest(){
     return(
@@ -11,7 +12,7 @@ export default function Latest(){
             <div className='LatestImg'>
                 <div> 
                     <div><img src={JoshuaPic} className='JoshuaPic' alt=''></img></div>
-                    <Link to ='./Home/Joshua'>
+                    <Link to ='/Latest/LatestLink' className='link'>
                     <div className='subHeading'>Joshua tree</div>
                     <div className='subHeading'>Overnight Adventure</div>
                     </Link>
@@ -23,7 +24,7 @@ export default function Latest(){
                 </div>
                 <div> 
                     <div><img src={JoshuaPic} className='JoshuaPic' alt=''></img></div>
-                    <Link to ='./Home/Joshua'>
+                    <Link to ='/Latest/LatestLink' className='link'>
                     <div className='subHeading'>Joshua tree</div>
                     <div className='subHeading'>Overnight Adventure</div>
                     </Link>
@@ -34,8 +35,8 @@ export default function Latest(){
                     </div>
                 </div>
                 <div> 
+                     <Link to ='/Latest/LatestLink' className='link'>
                     <div><img src={JoshuaPic} className='JoshuaPic' alt=''></img></div>
-                    <Link to ='./Home/Joshua'>
                     <div className='subHeading'>Joshua tree</div>
                     <div className='subHeading'>Overnight Adventure</div>
                     </Link>

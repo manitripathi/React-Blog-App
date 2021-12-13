@@ -6,9 +6,70 @@
     border:1px solid orange;
     margin-left: 0%;
 }
-
+.link{
+    border:0px;
+    color: black;
+}
+.descImgSubContent{
+    width:100%;
+    height:400px;
+}
+.fixedPosition{
+    position: fixed;
+    z-index: -2;
+    margin-left: 20px;
+    padding: 28px;
+    
+    cursor: pointer;
+    
+}
+.flexArrangeUser{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 100px;
+}
+.bollyBogsDesc{
+    margin-left: 50px;
+}
+.share-btns{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: space-around;
+    opacity: 0.4;
+}
+.MoreSiren{
+    font-weight:500;
+}
+.GetStartedContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.GetStarted{
+    border:1px solid skyblue;
+    color: skyblue;
+    height:30px;
+    font-size: 20px;
+    position: relative;
+    top:20px;
+    margin-left: 500px;
+}
+.sideArticle{
+    display: flex;
+}
 @media screen and (min-width:360px) and (max-width:640px) {
     .TopPosts{
         font-size: 25px;
+    }
+    .GetStarted{
+        border:1px solid skyblue;
+        color: skyblue;
+        height:30px;
+        font-size: 20px;
+        position: relative;
+        width:150px;
+        top:50px;
+        text-align: center;
+        margin-left: 500px;
     }
 }    
